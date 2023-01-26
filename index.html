@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>News Website</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header>
-        
+        <a class="logo" href="#0"
+        ><img src="images/SpaceLogo.svg" alt="Future Site Logo"/></a>
+
         <div id="menuToggle">
             <input type="checkbox" />
             <span></span>
@@ -15,14 +18,24 @@
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Local</a></li>
+          <li><a href="#">Canada</a></li>
         </ul>
       </nav>
 
       </div>
 
     </header>
+    
+    <div class="banner">
+        <img srcset="images/spaceport-large.jpg 1800w,
+                    images/spaceport-medium.jpg 900w,
+                    images/spaceport-small.jpg 450w"
+              src="images/spaceport-large.jpg"
+              sizes="(max-width: 960px) calc(100vw - 60px), 900px"
+              alt="Spaceport">
+      </div>
+
     <main>
       <section class="main-content">
         <article>
