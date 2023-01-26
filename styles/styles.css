@@ -229,7 +229,6 @@ header {
 	}
 
 }
-
 /* end hamburger menu */
 /* end Navigation */
 
@@ -284,6 +283,7 @@ header {
 .ad2 {
     grid-area: ad2;
     padding: 1em;
+    display: none;  
 }
 
 /* Main end full width*/
@@ -295,5 +295,9 @@ header {
                              "ad1      ad1       sidebar"
                              "article2 article2  sidebar"
                              "ad2      ad2       sidebar";
+    }
+
+    .ad2{
+        display: block;
     }
 }
