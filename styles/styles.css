@@ -20,7 +20,7 @@ body {
 	max-width: 960px;
 	padding: 0 30px;
 	margin: 0 auto;
-	background-color: white;	
+	background-color: rgb(23, 22, 22);	
 }
 
 /* Responsive Image Reset */
@@ -81,13 +81,12 @@ header {
 }
 
 .logo {
-	width: 60px;
+	width: 80px;
 } 
 
 .logo img {
 	display: block;	
 }
-
 /* Header Ends */
 
 /* Navigation */
@@ -306,7 +305,7 @@ header {
         display: block;
     }
 
-    .sidebar{
+    .sidebar ul{
         display: flex;
         flex-direction: column;
     }
