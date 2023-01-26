@@ -30,6 +30,7 @@ img {
 	height: auto;	
 }
 
+
 /* font settings */
 p, li, a, b {
 	font-family: 'Merriweather', serif;
@@ -91,7 +92,7 @@ header {
 
 /* Navigation */
 /* Hamburger Menu */
-@media(max-width: 800px){
+
 	#fullscreen-nav{
 		display: none;
 	}
@@ -196,10 +197,10 @@ header {
 
 	nav a:hover{
     color: blue;
-	}}
+	}
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
     input[type="checkbox"] {
         display: none;
     }
@@ -295,5 +296,4 @@ header {
                              "article2 article2  sidebar"
                              "ad2      ad2       sidebar";
     }
-
 }
