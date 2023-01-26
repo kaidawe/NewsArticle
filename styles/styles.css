@@ -241,7 +241,7 @@ header {
 
 
 
-/* Main start full width*/
+/* Main start mobile width*/
 .main-content {
     display: grid;
     grid-template-areas: "article1"
@@ -306,7 +306,7 @@ header {
         display: block;
     }
 
-    .sidebar:children{
+    .sidebar{
         display: flex;
         flex-direction: column;
     }
