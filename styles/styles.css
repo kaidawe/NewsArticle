@@ -239,11 +239,61 @@ header {
 	display: block;	
 }
 
+
+
 /* Main start full width*/
-.main {
+.main-content {
     display: grid;
-    grid-template-areas: "article article weather"
-                         "ad1     ad1     sidebar"
-                         "article article sidebar"
-                         "ad2     ad2     sidebar";
+    grid-template-areas: "article1"
+                         "weather"
+                         "article2"
+                         "sidebar"
+}
+
+/* Article */
+.article1 {
+    grid-area: article1;
+    padding: 1em;
+}
+
+.article2 {
+    grid-area: article2;
+    padding: 1em;
+}
+
+/* Weather */
+.weather {
+    grid-area: weather;
+    padding: 1em;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    padding: 1em;
+}
+
+/* Ad1 */
+.ad1 {
+    grid-area: ad1;
+    padding: 1em;
+}
+
+/* Ad2 */
+.ad2 {
+    grid-area: ad2;
+    padding: 1em;
+}
+
+/* Main end full width*/
+
+@media(min-width: 750px){
+    .main-content {
+        display: grid;
+        grid-template-areas: "article1 article1  weather"
+                             "ad1      ad1       sidebar"
+                             "article2 article2  sidebar"
+                             "ad2      ad2       sidebar";
+    }
+
 }
