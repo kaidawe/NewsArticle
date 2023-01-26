@@ -16,13 +16,11 @@ body {
 	margin: 0;
 }
 
-p, li, a, b {
-	font-family: 'Merriweather', serif;
-}
-
-p {
-	line-height: 1.4;
-    margin: 0.9em 0;
+.wrapper {
+	max-width: 960px;
+	padding: 0 30px;
+	margin: 0 auto;
+	background-color: white;	
 }
 
 /* Responsive Image Reset */
@@ -32,6 +30,15 @@ img {
 	height: auto;	
 }
 
+/* font settings */
+p, li, a, b {
+	font-family: 'Merriweather', serif;
+}
+
+p {
+	line-height: 1.4;
+    margin: 0.9em 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Merriweather', serif;
@@ -48,6 +55,9 @@ h2 {
 	font-size: 1.25em;	
 }
 
+
+/* Header */
+
 header h1 {
 	margin: 0;
 	margin-right: auto;
@@ -60,14 +70,6 @@ header h1 a {
 	font-family: 'Pacifico', cursive;	
 	color: #9E0002;
 	text-decoration: none;		
-}
-
-
-.wrapper {
-	max-width: 960px;
-	padding: 0 30px;
-	margin: 0 auto;
-	background-color: white;	
 }
 
 header {
@@ -85,7 +87,9 @@ header {
 	display: block;	
 }
 
+/* Header Ends */
 
+/* Navigation */
 /* Hamburger Menu */
 @media(max-width: 800px){
 	#fullscreen-nav{
@@ -226,8 +230,20 @@ header {
 }
 
 /* end hamburger menu */
+/* end Navigation */
 
 
+
+/* Banner */
 .banner img {
 	display: block;	
+}
+
+/* Main start full width*/
+.main {
+    display: grid;
+    grid-template-areas: "article article weather"
+                         "ad1     ad1     sidebar"
+                         "article article sidebar"
+                         "ad2     ad2     sidebar";
 }

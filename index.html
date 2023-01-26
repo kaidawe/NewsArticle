@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>News Website</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
   </head>
+
   <body>
     <header>
         <a class="logo" href="#0"
@@ -26,14 +29,9 @@
       </div>
 
     </header>
-    
+
     <div class="banner">
-        <img srcset="images/spaceport-large.jpg 1800w,
-                    images/spaceport-medium.jpg 900w,
-                    images/spaceport-small.jpg 450w"
-              src="images/spaceport-large.jpg"
-              sizes="(max-width: 960px) calc(100vw - 60px), 900px"
-              alt="Spaceport">
+        <img src="images/spaceport-large.jpg"alt="Spaceport">
       </div>
 
     <main>
@@ -43,12 +41,27 @@
           <h1>News Headline 1</h1>
           <p>News article text goes here...</p>
         </article>
+
+        <div class="ad1">
+            <img src="images/spaceport-large.jpg" alt="Spaceport">
+          </div>
+
         <article>
           <img src="news-image-2.jpg" alt="News Image 2" class="thumbnail">
           <h1>News Headline 2</h1>
           <p>More news article text goes here...</p>
         </article>
+
+        <div class="ad2">
+            <img src="images/spaceport-large.jpg" alt="Spaceport">
+          </div>
       </section>
+
+      <aside class="weather">
+        <h2>Weather</h2>
+        <img src="images/spaceport-large.jpg"alt="Spaceport">
+      </aside>
+
       <aside class="sidebar">
         <h2>Related News</h2>
         <ul>
@@ -62,9 +75,12 @@
           </li>
         </ul>
       </aside>
+
     </main>
+
     <footer>
       <p>Copyright © 2023 News Website</p>
     </footer>
+
   </body>
 </html>
