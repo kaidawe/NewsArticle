@@ -194,8 +194,9 @@ header {
     color: blue;
 	}
 
-
+    /* if screen is larger than 700px wide, the following will change: */
 @media(min-width: 700px) {
+    /* hamburger will be hidden */
     input[type="checkbox"] {
         display: none;
     }
