@@ -9,6 +9,7 @@
     --text-color: rgb(244, 244, 244);
     --header-font: 'Bebas Neue', sans-serif;
     --date-colour: rgb(143, 143, 143);
+    --realted-photo-size: width: 20rem, height: auto;
   }
 
 html {
@@ -24,7 +25,6 @@ body {
 }
 
 .wrapper {
-	max-width: 1800px;
 	padding: 0 30px;
 	margin: 0 auto;
     background: linear-gradient(to left, #101010, #1d1c1c);
@@ -51,13 +51,13 @@ p {
 
 h1, h2, h3, h4, h5, h6, a {
 	font-family: var(--header-font);
-	font-weight: 700;
+	font-weight: 600;
 	margin: 16px 0;	
     color: var(--text-color);
 }
 
 h1 {
-	font-size: 4em;	
+	font-size: 3em;	
 }
 
 h2 {
@@ -69,8 +69,44 @@ a + h4 {
 }
 
 h1 ~ h4 {
-    color: var(--date-color);
+    color: var(--date-colour);
 }
+
+/* search bar/sign up */
+.sign-up-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: none;
+    margin: 0;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--header-font);
+    color: var(--date-colour);
+}
+.hidden-search {
+    color: #10101000;
+    font-size: 1px;
+}
+
+.sign-up-bar > a:hover {
+    color: red;
+}
+.sign-up-bar > form:hover {
+    border-color: red;
+}
+
+#search {
+    border: none;
+    background-color: rgba(79, 75, 75, 0.443);
+    font-family: var(--header-font);
+    font-size: 1em;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+/* end of search bar/sign up */
 
 
 /* Header */
@@ -312,6 +348,30 @@ nav a:hover{
     }
   }
 
+.sidebar img{
+    display: block;
+    size-adjust: var(--realted-photo-size);
+    padding-bottom: 20px ;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 0;
+}
+
+.sidebar a {
+    font-size: 1.8em;
+}
+
+.sidebar p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+}
+
 
 
 /* Main start mobile width*/
@@ -354,26 +414,13 @@ nav a:hover{
     padding: 1em;
 }
 
-.sidebar ul{
-    list-style: none;
-    padding: 0;
-}
-
 /* Ad1 */
 .ad1 {
-    grid-area: ad1;
-    padding: 1em;
     display: none;
-}
-
-.ad1 img{
-    width: 100px;
 }
 
 /* Ad2 */
 .ad2 {
-    grid-area: ad2;
-    padding: 1em;
     display: none;  
 }
 
@@ -390,12 +437,20 @@ nav a:hover{
                              "ad2      ad2       ad2";
     }
 
+    .wrapper{
+        max-width: 80%;
+    }
+
     .ad2{
-        display: block;
+        grid-area: ad2;
+        display: flex;
+        justify-content: center;
     }
 
     .ad1{
-        display: block;
+        grid-area: ad1;
+        display: flex;
+        justify-content: center;
     }
 
     .sidebar ul{
@@ -404,7 +459,7 @@ nav a:hover{
     }
 }
 
-    @media (min-width: 1800px){
+    @media (min-width: 1200px){
         body{
             background-color: mediumslateblue;
         }
