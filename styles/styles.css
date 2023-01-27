@@ -319,24 +319,28 @@ nav a:hover{
     display: block;
 }
 
-/* Splash Section */
+/* Splash section */
 .banner > .splash-section {
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--display-color);
+    background-color: rgba(255, 0, 0, 0.529);
     width: 100%;
+    overflow: hidden;
+    padding: 0;
+
 }
 
 .banner h2 {
     animation: breaking-news 3s linear infinite;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 90px;
-    color: var(--display-color);
-    background-color: var(--text-color);
+    font-size: 50px;
+    color: var(--text-color);
     text-align: center;
+    padding: 0;
+    margin: 0;
   }
   
   @keyframes breaking-news {
@@ -427,7 +431,7 @@ nav a:hover{
 
 /* Main end full width*/
 
-@media(min-width: 750px){
+@media(min-width: 900px){
     .main-content {
         display: grid;
         grid-template-areas: "article1 article1  weather"
@@ -440,6 +444,17 @@ nav a:hover{
     .wrapper{
         max-width: 80%;
     }
+    body{
+        background-color: rgb(18, 12, 45);
+    }
+
+    .banner > .splash-section {
+        top: 90%
+    }
+
+    .banner h2 {
+        font-size: 6rem;
+    }
 
     .ad2{
         grid-area: ad2;
@@ -450,19 +465,12 @@ nav a:hover{
     .ad1{
         grid-area: ad1;
         display: flex;
-        justify-content: center;
     }
 
     .sidebar ul{
         display: flex;
         flex-direction: column;
     }
-}
-
-    @media (min-width: 1200px){
-        body{
-            background-color: mediumslateblue;
-        }
 }
 
 footer {
