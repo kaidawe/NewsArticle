@@ -21,7 +21,7 @@ body {
 	max-width: 1800px;
 	padding: 0 30px;
 	margin: 0 auto;
-	background: linear-gradient(to right, #000000, #333333);
+    background: linear-gradient(to left, #101010, #1d1c1c);
 }
 
 /* Responsive Image Reset */
