@@ -4,6 +4,10 @@
 
 /* CSS Reset */
 /* apply a natural box layout model to all elements, but allowing components to change */
+:root {
+    --display-color: #dd0000;
+    --text-color: rgb(244, 244, 244);
+  }
 
 html {
 	box-sizing: border-box;
@@ -35,7 +39,7 @@ img {
 /* font settings */
 p, li, b {
 	font-family: 'playfair display', serif;
-    color: white;
+    color: var(--text-color);
 }
 
 p {
@@ -47,7 +51,7 @@ h1, h2, h3, h4, h5, h6, a {
 	font-family: 'Bebas Neue', sans-serif;
 	font-weight: 700;
 	margin: 16px 0;	
-    color: white;
+    color: var(--text-color);
 }
 
 h1 {
@@ -58,40 +62,54 @@ h2 {
 	font-size: 2em;	
 }
 
+a + h4 {
+    color:grey;
+}
+
+h1 ~ h4 {
+    color: var(--display-color);
+}
+
 
 /* Header */
 header h1 {
-	margin: 0;
-	margin-right: auto;
-	font-size: 1.5em;
-	font-weight: 400;
-	margin-left: 10px;
+    margin: 0;
+    margin-right: auto;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: 10px;
 }
 
 header h1 a {
-	font-family: 'Bebas Neue', sans-serif;
-	color: #9E0002;
-	text-decoration: none;		
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    text-decoration: none;        
+
+}
+
+header h1 a:hover {
+    color: #ff8400;
+    border-bottom: red solid 3px;
+
 }
 
 header {
-	padding: 40px 0;
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .logo {
-	width: 80px;
+    width: 80px;
+    margin-left: .5rem;
 } 
 
 .logo img {
-	display: block;	
+    display: block;    
 }
 /* Header Ends */
-
-
-
 /* Navigation */
 /* Hamburger Menu */
 #menuToggle {
@@ -145,7 +163,7 @@ header {
 #menuToggle input:checked ~ span{
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: rgba(255, 255, 255, 0);
+    background: white;
 }
 
 #menuToggle input:checked ~ span:nth-last-child(3){
@@ -165,18 +183,19 @@ nav ul{
 .nav-test {
     display: none;
     height: 0;
-    /* overflow: hidden; */
     transition: 0.3s height;
 }
 
 #menuToggle input:checked ~ .nav-test {
     display: block;
     height: 150px;
+    padding-bottom: 10rem;
 }
 
 .nav-test ul {
     display: block;
     padding: 0;
+    padding-bottom: 10rem;
 }
 
 
@@ -193,15 +212,15 @@ nav a, nav a:visited{
 }
 
 nav a:hover{
-    color: blue;
+    border-bottom: red solid 3px;
 }
 
 .open{
     display: block;
-    margin-bottom: 7em;
+    margin-bottom: 10em;
+    padding-bottom: 10em;
     z-index: 1555555;
 }
-
 @media only screen and (min-width: 700px) {
     input[type="checkbox"] {
         display: none;
@@ -218,6 +237,7 @@ nav a:hover{
         flex-wrap: wrap;
         background-color: rgba(255, 255, 255, 0);
         color: rgba(255, 255, 255, 0);
+        margin-top: -3rem;
     }
 
     nav {
@@ -275,7 +295,7 @@ nav a:hover{
     white-space: nowrap;
     font-size: 90px;
     color: red;
-    background-color: white;
+    background-color: var(--text-color);
     text-align: center;
   }
   
@@ -310,6 +330,14 @@ nav a:hover{
     padding: 1em;
 }
 
+.article-content p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
 /* Weather */
 .weather {
     grid-area: weather;
@@ -320,6 +348,11 @@ nav a:hover{
 .sidebar {
     grid-area: sidebar;
     padding: 1em;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
 }
 
 /* Ad1 */
@@ -340,6 +373,7 @@ nav a:hover{
     display: none;  
 }
 
+
 /* Main end full width*/
 
 @media(min-width: 750px){
@@ -349,7 +383,7 @@ nav a:hover{
                              "article1 article1  sidebar"
                              "ad1      ad1       sidebar"
                              "article2 article2  sidebar"
-                             "ad2      ad2       sidebar";
+                             "ad2      ad2       ad2";
     }
 
     .ad2{
