@@ -21,7 +21,7 @@ body {
 	max-width: 1800px;
 	padding: 0 30px;
 	margin: 0 auto;
-	background-color: rgb(23, 22, 22);	
+	background: linear-gradient(to right, #000000, #333333);
 }
 
 /* Responsive Image Reset */
@@ -346,6 +346,7 @@ nav a:hover{
     .main-content {
         display: grid;
         grid-template-areas: "article1 article1  weather"
+                             "article1 article1  sidebar"
                              "ad1      ad1       sidebar"
                              "article2 article2  sidebar"
                              "ad2      ad2       sidebar";
