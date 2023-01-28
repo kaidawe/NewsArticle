@@ -1,4 +1,5 @@
 @charset "utf-8";
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap');
 /* CSS Document */
 
@@ -10,11 +11,12 @@
     --header-font: 'Bebas Neue', sans-serif;
     --date-colour: rgb(143, 143, 143);
     --realted-photo-size: width: 20rem, height: auto;
-  }
+}
 
 html {
 	box-sizing: border-box;
-  }
+}
+
 *, *:before, *:after {
 	box-sizing: inherit;
 }
@@ -30,7 +32,8 @@ body {
     background: linear-gradient(to left, #101010, #1d1c1c);
 }
 
-/* Responsive Image Reset */
+/* Responsive Image Reset 
+------------------------------------------------------------- */
 
 img {
 	max-width: 100%;
@@ -38,7 +41,8 @@ img {
 }
 
 
-/* font settings */
+/* font settings 
+------------------------------------------------------------- */
 p, li, b {
 	font-family: 'playfair display', serif;
     color: var(--text-color);
@@ -72,7 +76,8 @@ h1 ~ h4 {
     color: var(--date-colour);
 }
 
-/* search bar/sign up */
+/* search bar/sign up 
+------------------------------------------------------------- */
 .sign-up-bar {
     display: flex;
     flex-direction: row;
@@ -84,6 +89,7 @@ h1 ~ h4 {
     font-family: var(--header-font);
     color: var(--date-colour);
 }
+
 .hidden-search {
     color: #10101000;
     font-size: 1px;
@@ -92,6 +98,7 @@ h1 ~ h4 {
 .sign-up-bar > a:hover {
     color: red;
 }
+
 .sign-up-bar > form:hover {
     border-color: red;
 }
@@ -109,7 +116,8 @@ h1 ~ h4 {
 /* end of search bar/sign up */
 
 
-/* Header */
+/* Header 
+------------------------------------------------------------- */
 header h1 {
     margin: 0;
     margin-right: auto;
@@ -150,7 +158,8 @@ header {
 /* Header Ends */
 
 
-/* Navigation */
+/* Navigation 
+------------------------------------------------------------- */
 /* Hamburger Menu */
 #menuToggle {
     position: relative;
@@ -164,12 +173,9 @@ header {
     position: absolute;
     top: -7px;
     left: -5px;
-
     cursor: pointer;
-
     opacity: 0;
     z-index: 2;
-
     -webkit-touch-callout: none;
 }
 
@@ -179,14 +185,10 @@ header {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
     background: var(--text-color);
     border-radius: 3px;
-
     z-index: 1;
-
     transform-origin: 4px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                 opacity 0.55s ease;
@@ -261,10 +263,12 @@ nav a:hover{
     padding-bottom: 10em;
     z-index: 1555555;
 }
+
 @media only screen and (min-width: 700px) {
     input[type="checkbox"] {
         display: none;
     }
+
     #menuToggle{
         display: none;
     }
@@ -272,6 +276,7 @@ nav a:hover{
     .nav-test {
         display: block;
     }
+
     #main-nav ul {
         display: flex;
         flex-wrap: wrap;
@@ -289,6 +294,7 @@ nav a:hover{
         display: flex;
         align-items: center;
     }
+
     ul {
         display: flex;
         align-items: center;
@@ -296,40 +302,30 @@ nav a:hover{
         margin: 0;
         padding: 0;
     }
+
     li {
         margin: 0;
         padding: 20px;
     }
+
     a {
         text-decoration: none;
         color: var(--text-color);
     }
-
 }
 /*end hamburger and nav */
 
 
-/* Banner */
+/* Banner 
+------------------------------------------------------------- */
 .banner {
     position: relative;
     text-align: center;
     color: white;
 }
+
 .banner img {
     display: block;
-}
-
-/* Splash section */
-.banner > .splash-section {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 0, 0, 0.529);
-    width: 100%;
-    overflow: hidden;
-    padding: 0;
-
 }
 
 .banner h2 {
@@ -341,44 +337,23 @@ nav a:hover{
     text-align: center;
     padding: 0;
     margin: 0;
-  }
-  
-  @keyframes breaking-news {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-.sidebar img{
-    display: block;
-    size-adjust: var(--realted-photo-size);
-    padding-bottom: 20px ;
 }
 
-.sidebar ul{
-    list-style: none;
+/* Splash section 
+------------------------------------------------------------- */
+.banner > .splash-section {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.529);
+    width: 100%;
+    overflow: hidden;
     padding: 0;
 }
 
-.sidebar li {
-    padding: 0;
-}
-
-.sidebar a {
-    font-size: 1.8em;
-}
-
-.sidebar p {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    padding-bottom: 20px;
-}
-
-
-
-/* Main start mobile width*/
+/* Main start mobile width
+------------------------------------------------------------- */
 .main-content {
     display: grid;
     grid-template-areas: "article1"
@@ -412,25 +387,46 @@ nav a:hover{
     padding: 1em;
 }
 
+/* Ad1 & Ad2 */
+.ad1, .ad2 {
+    display: none;
+}
+
+/* Side Bar
+------------------------------------------------------------- */
 /* Sidebar */
 .sidebar {
     grid-area: sidebar;
     padding: 1em;
 }
 
-/* Ad1 */
-.ad1 {
-    display: none;
+.sidebar img{
+    display: block;
+    size-adjust: var(--realted-photo-size);
+    padding-bottom: 20px ;
 }
 
-/* Ad2 */
-.ad2 {
-    display: none;  
+.sidebar ul{
+    list-style: none;
+    padding: 0;
 }
 
+.sidebar li {
+    padding: 0;
+}
 
+.sidebar a {
+    font-size: 1.8em;
+}
+
+.sidebar p {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 20px;
+}
 /* Main end full width*/
 
+/* Main MediaQuery WITH Sidebar
+-------------------------------------------------------------  */
 @media(min-width: 900px){
     .main-content {
         display: grid;
@@ -444,6 +440,7 @@ nav a:hover{
     .wrapper{
         max-width: 80%;
     }
+
     body{
         background-color: rgb(18, 12, 45);
     }
@@ -473,10 +470,23 @@ nav a:hover{
     }
 }
 
+/* Footer
+------------------------------------------------------------- */
 footer {
     display: flex;
     justify-content: center;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 80px 0;
+}
+
+/* Key Frames 
+------------------------------------------------------------- */
+@keyframes breaking-news {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
